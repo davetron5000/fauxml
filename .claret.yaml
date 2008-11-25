@@ -49,5 +49,12 @@ items:
 
   id: 7
   name: Proper test cases
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 8
+  name: Allow multiple attribute assigments on same line as tag
 name: FauXML
-next_id: 8
+next_id: 9
