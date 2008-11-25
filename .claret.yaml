@@ -42,5 +42,12 @@ items:
 
   id: 6
   name: Make ant task only run if something needs to be done (and have it print out that it did something)
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 7
+  name: Proper test cases
 name: FauXML
-next_id: 7
+next_id: 8
