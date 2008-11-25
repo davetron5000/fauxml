@@ -1,10 +1,14 @@
-# FauXML #
+# FauXML
 
-Many technologies require XML configuration files.  While XML is suitable for data 
+FauXML is a way to create hierarchical data that should be turned into XML in a way that doesn't require all the noise and quoting of XML, with a few features to make it a bit simpler.  This is **not** a new serialization language, but a way to facilitate hand-creating XML for Java applications
+
+# Overview
+
+Many Java technologies require XML configuration files.  While XML is suitable for data 
 interchange, it is not very good at configuration.  Authoring and maintaining such files is 
 difficult and error-prone, mostly due to the strict requirements of an XML document.  
-FauXML is a simplified way of creating and maintaining these files.  The signal-to-noise ratio is very high, 
-and a rudimentary property system allows for the removal of redunant information.
+
+FauXML is a simplified way of creating and maintaining these files.  The signal-to-noise ratio is very high, and a rudimentary property system allows for the removal of redunant information.
 
 Here's an example, based on the J2EE web application configuration:
 
@@ -25,7 +29,7 @@ Here's an example, based on the J2EE web application configuration:
         </servlet-mapping>
     </web-app>
 
-As with most XML configuration files, it's very difficult to pick out the actual information as the signal to noise ratio is very low.  Indenting helps, but even a moderately-sized XML file can be difficult to navigate without special editing tools.  The reason is the verbosity of XML, with angle brackets, closing tags and quotes interspersed amongst the data.  If we make a few conventions in our formatting, this information becomes superfluous and can be removed.  FauXML can reconstruct it using context and eliminate errors related to quoting, tag closing and repetition of values.  Following is a FauXML document that can be translated into equivalent XML document above:
+As with most XML configuration files, it's very difficult to pick out the actual information as the signal to noise ratio is very low.  Indenting helps, but even a moderately-sized XML file can be difficult to navigate without special editing tools.  The reason is the verbosity of XML, with angle brackets, closing tags and quotes interspersed amongst the data.  If we make a few conventions in our formatting, this information becomes superfluous and can be removed.  FauXML can reconstruct it using context to eliminate errors related to quoting, tag closing and repetition of values.  Following is a FauXML document that can be translated into equivalent XML document above:
 
     $name=action
     $package=org.apache.struts.$name
