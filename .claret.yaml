@@ -1,0 +1,46 @@
+--- !ruby/object:Claret::Project 
+items: 
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 1
+  name: Allow Escaping of dollar signs
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 2
+  name: Allow included properties files
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 3
+  name: Perhaps a way to create line continuations
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 4
+  name: Canonicalize properties for ant, given the option
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 5
+  name: Better spring example in docs
+- !ruby/object:Claret::Task 
+  contributes_to: []
+
+  dependents: []
+
+  id: 6
+  name: Make ant task only run if something needs to be done (and have it print out that it did something)
+name: FauXML
+next_id: 7

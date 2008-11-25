@@ -1,0 +1,20 @@
+$servlet_name=action
+$package=org.apache.struts.$servlet_name
+
+web-app
+    display-name 
+        |Prototype
+        |Proto what
+        |This is multi-line
+    servlet
+        id=223423
+        # Struts action servlet
+        servlet-name $servlet_name
+        servlet-class ${package}.ActionServlet
+        init-param
+            param-name config
+            param-value /WEB-INF/struts-config.xml
+        load-on-startup 1
+    servlet-mapping
+        servlet-name $servlet_name
+        url-pattern *.do

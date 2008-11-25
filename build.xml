@@ -1,0 +1,26 @@
+<project name="FauXML" default="compile" basedir="." >
+    <description>Build file for FauXML</description>
+
+    <path id="build.compile.classpath" >
+        <fileset includes="*.jar" dir="${basedir}/lib" />
+    </path>
+
+    <target name="compile" description="Compiles all code" >
+        <mkdir dir="${basedir}/build/classes" />
+        <depend 
+            srcdir="${basedir}/src/java" 
+            destdir="{$basedir}/build/classes" 
+            closure="yes" 
+            cache="build/depcache" />
+        <javac 
+            deprecation="on" 
+            srcdir="${basedir}/src/java" 
+            destdir="${basedir}/build/classes" 
+            debug="on" 
+            classpathref="build.compile.classpath" />
+    </target>
+
+    <target name="clean" description="Clean generated files">
+        <delete dir="${basedir}/build" />
+    </target>
+</project>

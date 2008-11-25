@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd" >
+    <bean id="inMemTodoDataSource" parent="abstractTodoDataSource" class="$package.InMemoryTodoDataSource" >
+        <constructor-arg ref="readWriteLock" />
+    </bean>
+    <bean id="todoDataSource" parent="abstractTodoDataSource" class="$package.SerializedTodoDataSource" >
+        <constructor-arg ref="readWriteLock" />
+        <constructor-arg ref="serializedDataStore" />
+    </bean>
+    <bean id="serializedDataStore" class="java.io.File" scope="prototype" >
+        <constructor-arg type="java.lang.String" value="db.ser" />
+    </bean>
+</beans>
